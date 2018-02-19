@@ -26,7 +26,7 @@ class Mystery(game.Mode):
              self.game.lampctrl.register_show('mystery_show', lampshow_path+"mystery.lampshow")
 
              #self.mysterylist =['Complete ROAD','Complete KINGS','500.000','1 Million','Light Kickback','20 Miles','Hold BonusX','1,5 Million','Bonus add 5X','Light Extra Ball','Quick MultiBall']
-             self.mysterylist =['Complete ROAD','Complete KINGS','500.000','1 Million','Light Kickback','20 Miles','Hold BonusX','Award left combo','Bonus add 5X','Light Extra Ball','X-ramp 250k']
+             self.mysterylist =['Complete ROAD','Complete KINGS','500.000','1 Million','Light Kickback','20 Miles','Hold BonusX','Award left combo','Bonus add 5X','Light Extra Ball','X-ramp 250k', '250.000']
              self.temp_list =[]
 
              self.tournament_mode = False # VIA MENU
@@ -187,6 +187,9 @@ class Mystery(game.Mode):
             elif option==self.mysterylist[10]: # X-ramp 250k
                 print("Mystery award: X-ramp 250k")
                 self.game.base_game_mode.crossramp.set_crossramp_values(value=250000)
+            elif option==self.mysterylist[11]: # 250k
+                print("Mystery award: 250.000")
+                self.game.score(250000)
 
         def mystery_end(self):
              self.clear_layer()
