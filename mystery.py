@@ -86,6 +86,7 @@ class Mystery(game.Mode):
         def clear_layer(self):
             self.layer = None
 
+
 ## mode functions
 
         def lit(self):
